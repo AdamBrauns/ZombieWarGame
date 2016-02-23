@@ -72,51 +72,56 @@ public class Main {
 		  survivorsAttack(survivors, zombies);
 		  zombiesAttack(survivors, zombies);
 
-		  if (allDead(survivors)) {
-			  System.out.println("None of the survivors made it.");
-			  break;
-		  } else {
-			  int count = 0;
-			  for (int i = 0; i < survivors.length; i++) {
-				  if (survivors[i].isAlive()) count++;
-			  }
-			  System.out.println("It seems " + count + " have made it to safety.");
+		  if ( allDead(zombies) || allDead(survivors) ) break;
+	  }
+
+	  if (allDead(survivors)) {
+		  System.out.println("None of the survivors made it.");
+	  } else {
+		  int count = 0;
+		  for (int i = 0; i < survivors.length; i++) {
+			  if (survivors[i].isAlive()) count++;
 		  }
-		  if ( allDead(zombies) ) break;
+		  System.out.println("It seems " + count + " have made it to safety.");
 	  }
 
   }
 
 	public static void survivorsAttack( ISurvivor[] survivors, IZombie[] zombies ){
-		System.out.println( "Survivors Turn:\n" );
+		//System.out.println( "Survivors Turn:\n" );
 		for (int i = 0; i < survivors.length; i++) {
 			for (int j = 0; j < zombies.length; j++) {
 				// each survivor attacks each zombie if they're both alive
 				if (survivors[i].isAlive() && zombies[j].isAlive()) {
 					survivors[i].attack(zombies[j]);
-					//if survivor kills a zombie, print out their accomplishment
-					if (!zombies[j].isAlive()) {
-						System.out.println(survivors[i] + " " + i + " killed " + zombies[j] + " " + j);
-					}
+
 				}
 			}
 		}
 	}
 
 	public static void zombiesAttack( ISurvivor[] survivors, IZombie[] zombies ){
-		System.out.println( "\nZombies' Turn:\n" );
+		//System.out.println( "\nZombies' Turn:\n" );
 		for (int i = 0; i < zombies.length; i++) {
 			for (int j = 0; j < survivors.length; j++) {
 				// each zombie attacks each survivor if they're both alive
 				if (survivors[j].isAlive() && zombies[i].isAlive()) {
 					zombies[i].attack(survivors[j]);
-					//if zombie kills a survivor, print out their accomplishment
-					if ( !survivors[j].isAlive() ) {
-						System.out.println(zombies[i] + " " + i + " killed " + survivors[j] + " " + j);
-					}
 				}
 			}
 		}
 	}
+
+	/* //if survivor kills a zombie, print out their accomplishment
+					if (!zombies[j].isAlive()) {
+						System.out.println(survivors[i] + " " + i + " killed " + zombies[j] + " " + j);
+					}
+
+		//if zombie kills a survivor, print out their accomplishment
+		if ( !survivors[j].isAlive() ) {
+			System.out.println(zombies[i] + " " + i + " killed " + survivors[j] + " " + j);
+		}
+	*/
+
 
 }
