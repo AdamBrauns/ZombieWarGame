@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=CharacterFactory()
-comment1.params=type
-comment1.target=zombiewar.intf.ICharacter\ make(java.lang.String)
-comment1.text=\r\n\ Make\ the\ character.\ \ To\ support\ more\ characters,\r\n\ simply\ implement\ a\ type\ and\ then\ add\ a\ case\ statement\r\n\ to\ this\ method.\r\n\ \r\n\ @param\ type\ The\ type\ of\ character\ to\ make.\r\n\ @return\ \r\n
-numComments=2
