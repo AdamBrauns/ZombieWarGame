@@ -18,4 +18,9 @@ public class Dog extends Character implements ISurvivor {
 	public void attack(final IZombie zombie) {
 		zombie.decreaseHealth(3);
 	}
+
+	@Override
+	public String toString() {
+		return "Dog";
+	}
 }
