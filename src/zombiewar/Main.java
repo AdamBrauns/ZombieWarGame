@@ -87,7 +87,7 @@ public class Main {
 			  for (int j = 0; j < survivors.length; j++) {
 				  // each zombie attacks each survivor if they're both alive
 				  if (survivors[j].isAlive() && zombies[i].isAlive()) {
-					  zombies[j].attack(survivors[i]);
+					  zombies[i].attack(survivors[j]);
 					  //if zombie kills a survivor, print out their accomplishment
 					  if ( !survivors[j].isAlive() ) {
 						  System.out.println(zombies[i] + " " + i + " killed " + survivors[j] + " " + j);
