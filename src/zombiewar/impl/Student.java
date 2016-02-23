@@ -21,6 +21,9 @@ public class Student extends Character implements ISurvivor{
 	public void attack(IZombie zombie) {
 		zombie.decreaseHealth(4);
 	}
-	
-	
+
+	@Override
+	public String toString(){
+		return "Student";
+	}
 }

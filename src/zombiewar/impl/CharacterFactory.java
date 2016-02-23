@@ -1,6 +1,7 @@
 
 package zombiewar.impl;
 
+import com.sun.javaws.exceptions.InvalidArgumentException;
 import zombiewar.intf.ICharacter;
 import zombiewar.intf.ICharacterFactory;
 /**
@@ -27,10 +28,16 @@ public class CharacterFactory implements ICharacterFactory{
   @Override
   public ICharacter make(String type) {
     switch(type){
-      case "soldier"  : return new Soldier();
-      case "tank"     : return new Tank();
-    }
-    return null;
+      case "common": return new Common();
+      case "tank": return new Tank();
+      case "predator": return new Predator();
+      case "soldier": return new Soldier();
+      case "teacher": return new Teacher();
+      case "student": return new Student();
+      case "child": return new Child();
+    }//end switch
+
+    throw new IllegalArgumentException(type + " is not a type of zombie or survivor");
   }
   
 }
