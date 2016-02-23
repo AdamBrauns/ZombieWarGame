@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=survivor
+comment0.target=void\ attack(ISurvivor)
+comment0.text=\r\n\ Attack\ a\ survivor\r\n\ \r\n\ @param\ survivor\ \r\n
+numComments=1

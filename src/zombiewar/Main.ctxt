@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=intf.IZombie[]\ randomZombies()
+comment1.params=
+comment1.target=intf.ISurvivor[]\ randomSurvivors()
+comment2.params=characters
+comment2.target=boolean\ allDead(intf.ICharacter[])
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+comment3.text=\r\n\ @param\ args\ the\ command\ line\ arguments\r\n
+numComments=4

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=zombie
+comment0.target=void\ attack(IZombie)
+comment0.text=\r\n\ Attack\ a\ zombie\ by\ decreasing\ its\ health.\r\n\ \r\n\ @param\ zombie\ \r\n
+numComments=1
