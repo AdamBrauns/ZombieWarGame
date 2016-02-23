@@ -18,7 +18,7 @@ Since a child is so weak, he or she usually does not survive the escape.
                 Health      Attack
 Common Infect   30          5
 Tank           150         20
-Predator	 80         10
+Predator	 	80         10
 Child           20          2
 Teacher         50          5
 Soldier        100         10
