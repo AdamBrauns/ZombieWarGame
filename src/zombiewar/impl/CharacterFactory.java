@@ -37,6 +37,7 @@ public class CharacterFactory implements ICharacterFactory{
       case "child": return new Child();
     }//end switch
 
+    // just in case, for debugging
     throw new IllegalArgumentException(type + " is not a type of zombie or survivor");
   }
   
