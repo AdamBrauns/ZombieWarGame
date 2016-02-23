@@ -112,6 +112,7 @@ public class Main {
 		}
 	}
 
+	// Release 2.0 functionality:
 	/* //if survivor kills a zombie, print out their accomplishment
 					if (!zombies[j].isAlive()) {
 						System.out.println(survivors[i] + " " + i + " killed " + zombies[j] + " " + j);
