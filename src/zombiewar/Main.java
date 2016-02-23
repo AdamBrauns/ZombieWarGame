@@ -71,7 +71,7 @@ public class Main {
 	  while (true) {
 			System.out.println( "Survivors Turn:\n" );
 		  for (int i = 0; i < survivors.length; i++) {
-			  for (int j = 0; j < zombies.length; i++) {
+			  for (int j = 0; j < zombies.length; j++) {
 				  // each survivor attacks each zombie if they're both alive
 				  if (survivors[i].isAlive() && zombies[j].isAlive()) {
 					  survivors[i].attack(zombies[j]);
@@ -84,10 +84,10 @@ public class Main {
 		  }
 			System.out.println( "\nZombies' Turn:\n" );
 		  for (int i = 0; i < zombies.length; i++) {
-			  for (int j = 0; j < survivors.length; i++) {
+			  for (int j = 0; j < survivors.length; j++) {
 				  // each zombie attacks each survivor if they're both alive
 				  if (survivors[j].isAlive() && zombies[i].isAlive()) {
-					  zombies[j].attack(survivors[i]);
+					  zombies[i].attack(survivors[j]);
 					  //if zombie kills a survivor, print out their accomplishment
 					  if ( !survivors[j].isAlive() ) {
 						  System.out.println(zombies[i] + " " + i + " killed " + survivors[j] + " " + j);
