@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=health
-comment0.target=Character(int)
-comment1.params=increment
-comment1.target=void\ decreaseHealth(int)
-comment2.params=
-comment2.target=boolean\ isAlive()
-numComments=3

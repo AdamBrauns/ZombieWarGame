@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=increment
-comment0.target=void\ decreaseHealth(int)
-comment0.text=\r\n\ decrease\ in\ health\ as\ a\ result\ of\ being\ attacked.\r\n\ \r\n\ @param\ increment\ the\ amount\ of\ health\ to\ decrease.\r\n
-comment1.params=
-comment1.target=boolean\ isAlive()
-comment1.text=\r\n\ Is\ the\ character\ still\ alive?\r\n\ @return\ true\ if\ still\ alive.\r\n
-numComments=2
