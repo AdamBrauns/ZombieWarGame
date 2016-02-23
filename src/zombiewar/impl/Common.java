@@ -21,6 +21,9 @@ public class Common extends Character implements IZombie{
 	public void attack(ISurvivor survivor) {
 		survivor.decreaseHealth(5);
 	}
-	
-	
+
+	@Override
+	public String toString(){
+		return "Common Infected";
+	}
 }

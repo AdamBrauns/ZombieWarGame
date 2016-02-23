@@ -9,7 +9,7 @@ import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
 /**
- * A soldier is one of the strongest survivor because he wears armor 
+ * A soldier is one of the strongest survivor because he wears armor
  * and carries a weapon.
  * 
  * @author thaoc
@@ -27,6 +27,9 @@ public class Soldier extends Character implements ISurvivor{
 	public void attack(IZombie zombie) {
 		zombie.decreaseHealth(10);
 	}
-	
-	
+
+	@Override
+	public String toString(){
+		return "Soldier";
+	}
 }

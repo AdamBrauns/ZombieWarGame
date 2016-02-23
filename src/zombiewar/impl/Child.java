@@ -23,5 +23,8 @@ public class Child extends Character implements ISurvivor{
 		zombie.decreaseHealth(2);
 	}
 	
-	
+	@Override
+	public String toString(){
+		return "Child";
+	}
 }

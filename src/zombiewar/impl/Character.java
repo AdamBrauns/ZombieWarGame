@@ -12,7 +12,7 @@ public abstract class Character implements ICharacter{
 
 	@Override
 	public void decreaseHealth(int increment) {
-		health-=increment;
+		health -= increment;
 	}
 
 	@Override
