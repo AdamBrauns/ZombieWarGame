@@ -21,9 +21,30 @@ public class Main {
 		IZombie[] zombies = randomZombies();
 		ISurvivor[] survivors = randomSurvivors();
 
-		System.out.println("We have " + survivors.length + " survivors trying to make it to safety.");
-		System.out.println("But there are " + zombies.length + " zombies waiting for them.");
-
+	  System.out.print("We have " + survivors.length + " survivors trying to make it to safety. (");
+	  int numCommon = 0, numTank = 0, numPredator = 0; 
+	  
+	  for(IZombie element: zombies){
+		  if(element instanceof Common){
+			  numCommon++;
+		  }else if(element instanceof Tank){
+			  numTank++;
+		  }else if(element instanceof Predator){
+			  numPredator++;
+		  }
+	  }
+	  if(numCommon>0){
+		  System.out.print(numCommon+" Common ");
+	  }
+	  if(numTank>0){
+		  System.out.print(numTank+" Tank ");
+	  }
+	  if(numPredator>0){
+		  System.out.print(numPredator+" Predator ");
+	  }
+	  
+	  
+	  System.out.println(")\nBut there are " + zombies.length + " zombies waiting for them.\n");
 		//      When all the survivors have done attacking, it's the zombies'
 		//      turn to attack.  For each zombie that is still alive, attack
 		//      each suvivor that is still alive.  Repeat this cycle until
