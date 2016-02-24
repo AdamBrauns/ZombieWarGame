@@ -8,19 +8,19 @@ import zombiewar.intf.IZombie;
  *
  * @author Reinaldo
  */
-public class Dog extends Character implements ISurvivor {
+public class Spitter extends Character implements IZombie {
 
-	Dog() {
-		super(50);
+	public Spitter() {
+		super(45);
 	}
 
 	@Override
-	public void attack(final IZombie zombie) {
-		zombie.decreaseHealth(15);
+	public void attack(final ISurvivor creature) {
+		creature.decreaseHealth(30);
 	}
 
 	@Override
 	public String toString() {
-		return "Dog";
+		return "Radioactive Zombie";
 	}
 }

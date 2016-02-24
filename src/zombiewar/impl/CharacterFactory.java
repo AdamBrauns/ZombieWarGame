@@ -42,6 +42,12 @@ public class CharacterFactory implements ICharacterFactory {
 				return new Student();
 			case "child":
 				return new Child();
+			case "dog":
+				return new Dog();
+			case "radioactivezombie":
+				return new RadioactiveZombie();
+			case "spitter":
+				return new Spitter();
 		}
 		return null;
 	}
