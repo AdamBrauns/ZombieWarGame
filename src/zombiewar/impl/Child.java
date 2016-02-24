@@ -9,22 +9,30 @@ import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
 
-public class Child extends Character implements ISurvivor{
+public class Child extends Character implements ISurvivor {
+
+	private int index;
 
 	/**
 	 * A Child starts with 20 points of health
 	 */
-	public Child() {
+	public Child(int index) {
 		super(20);
+		this.index = index;
 	}
 
 	@Override
 	public void attack(IZombie zombie) {
 		zombie.decreaseHealth(2);
 	}
-	
+
 	@Override
-	public String toString(){
+	public String toString() {
 		return "Child";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

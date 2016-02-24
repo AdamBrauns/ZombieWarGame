@@ -8,13 +8,16 @@ package zombiewar.impl;
 import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
-public class Common extends Character implements IZombie{
+public class Common extends Character implements IZombie {
 
+	private int index;
 	/**
 	 * A Common starts with 30 points of health
 	 */
-	public Common() {
+	public Common(int index) {
+
 		super(30);
+		this.index = index;
 	}
 
 	@Override
@@ -23,7 +26,12 @@ public class Common extends Character implements IZombie{
 	}
 
 	@Override
-	public String toString(){
+	public String toString() {
 		return "Common Infected";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

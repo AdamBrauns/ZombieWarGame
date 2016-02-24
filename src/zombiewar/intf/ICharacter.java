@@ -24,4 +24,11 @@ public interface ICharacter {
 	 * @return true if still alive.
 	 */
 	public boolean isAlive();
+
+	/**
+	 * Return for instance : 0, 1, 2, useful for: Child 0, child 1, Soldier 0...
+	 *
+	 * @return the index of the character
+	 */
+	public int getIndex();
 }

@@ -10,8 +10,11 @@ import zombiewar.intf.IZombie;
  */
 public class Spitter extends Character implements IZombie {
 
-	public Spitter() {
+	private int index;
+
+	public Spitter(int index) {
 		super(45);
+		this.index = index;
 	}
 
 	@Override
@@ -22,5 +25,10 @@ public class Spitter extends Character implements IZombie {
 	@Override
 	public String toString() {
 		return "Radioactive Zombie";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

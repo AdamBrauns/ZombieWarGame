@@ -11,11 +11,13 @@ import zombiewar.intf.IZombie;
  */
 public class Tank extends Character implements IZombie{
 
+	private int index;
 	/**
 	 * A tank starts with 150 points of health
 	 */
-	public Tank() {
+	public Tank(int index) {
 		super(150);
+		this.index = index;
 	}
 
 	/**
@@ -30,5 +32,10 @@ public class Tank extends Character implements IZombie{
 	@Override
 	public String toString(){
 		return "Tank";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

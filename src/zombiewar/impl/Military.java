@@ -11,11 +11,11 @@ import zombiewar.intf.IZombie;
 
 public class Military extends Character implements ISurvivor {
 
-	/**
-	 * A Child starts with 20 points of health
-	 */
-	public Military() {
+	private int index;
+
+	public Military(int index) {
 		super(70);
+		this.index = index;
 	}
 
 	@Override
@@ -26,5 +26,10 @@ public class Military extends Character implements ISurvivor {
 	@Override
 	public String toString() {
 		return "military";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

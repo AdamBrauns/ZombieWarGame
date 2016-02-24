@@ -10,11 +10,13 @@ import zombiewar.intf.IZombie;
 
 public class Predator extends Character implements IZombie{
 
+	private int index;
 	/**
 	 * A Predator starts with 80 points of health
 	 */
-	public Predator() {
+	public Predator(int index) {
 		super(80);
+		this.index = index;
 	}
 
 	@Override
@@ -25,5 +27,10 @@ public class Predator extends Character implements IZombie{
 	@Override
 	public String toString(){
 		return "Predator";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

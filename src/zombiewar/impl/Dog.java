@@ -10,8 +10,11 @@ import zombiewar.intf.IZombie;
  */
 public class Dog extends Character implements ISurvivor {
 
-	Dog() {
+	private int index;
+
+	Dog(int index) {
 		super(50);
+		this.index = index;
 	}
 
 	@Override
@@ -22,5 +25,10 @@ public class Dog extends Character implements ISurvivor {
 	@Override
 	public String toString() {
 		return "Dog";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

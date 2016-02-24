@@ -8,13 +8,16 @@ package zombiewar.impl;
 import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
-public class Student extends Character implements ISurvivor{
+public class Student extends Character implements ISurvivor {
+
+	private int index;
 
 	/**
 	 * A student starts with 50 points of health
 	 */
-	public Student() {
+	public Student(int index) {
 		super(50);
+		this.index = index;
 	}
 
 	@Override
@@ -23,7 +26,12 @@ public class Student extends Character implements ISurvivor{
 	}
 
 	@Override
-	public String toString(){
+	public String toString() {
 		return "Student";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }

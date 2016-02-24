@@ -11,16 +11,19 @@ import zombiewar.intf.IZombie;
 /**
  * A soldier is one of the strongest survivor because he wears armor
  * and carries a weapon.
- * 
+ *
  * @author thaoc
  */
-public class Soldier extends Character implements ISurvivor{
+public class Soldier extends Character implements ISurvivor {
+
+	private int index;
 
 	/**
 	 * A soldier starts with 100 points of health
 	 */
-	public Soldier() {
+	public Soldier(int index) {
 		super(100);
+		this.index = index;
 	}
 
 	@Override
@@ -29,7 +32,12 @@ public class Soldier extends Character implements ISurvivor{
 	}
 
 	@Override
-	public String toString(){
+	public String toString() {
 		return "Soldier";
+	}
+
+	@Override
+	public int getIndex() {
+		return index;
 	}
 }
