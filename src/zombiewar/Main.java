@@ -55,7 +55,7 @@ public class Main {
 		int numZombies = (int) (Math.random() * 10);
 		IZombie[] zombies = new IZombie[numZombies];
 		for (int i = 0; i < zombies.length; i++) {
-			int zombieType = (int) (Math.random() * 10);
+			int zombieType = (int) (Math.random() * 7);
 			switch (zombieType) {
 				case 0:
 					zombies[i] = (IZombie) factory.make("common");
@@ -71,6 +71,12 @@ public class Main {
 					break;
 				case 4:
 					zombies[i] = (IZombie) factory.make("spitter");
+					break;
+				case 5:
+					survivors[i] = (IZombie) factory.make("undeaddog");
+					break;
+				case 6:
+					survivors[i] = (IZombie) factory.make("undeadbear");
 					break;
 			}
 		}
@@ -100,6 +106,7 @@ public class Main {
 					break;
 				case 5:
 					survivors[i] = (ISurvivor) factory.make("military");
+					break;
 			}
 		}
 		return survivors;
