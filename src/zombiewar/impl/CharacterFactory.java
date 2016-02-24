@@ -48,6 +48,8 @@ public class CharacterFactory implements ICharacterFactory {
 				return new RadioactiveZombie();
 			case "spitter":
 				return new Spitter();
+			case "military":
+				return new Military();
 		}
 		return null;
 	}

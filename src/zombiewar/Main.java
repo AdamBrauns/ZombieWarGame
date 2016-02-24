@@ -78,7 +78,7 @@ public class Main {
 		int numZombies = (int) (Math.random() * 20);
 		ISurvivor[] survivors = new ISurvivor[numZombies];
 		for (int i = 0; i < survivors.length; i++) {
-			int type = (int) (Math.random() * 5);
+			int type = (int) (Math.random() * 6);
 			switch (type) {
 				case 0:
 					survivors[i] = (ISurvivor) factory.make("soldier");
@@ -95,6 +95,8 @@ public class Main {
 				case 4:
 					survivors[i] = (ISurvivor) factory.make("dog");
 					break;
+				case 5:
+					survivors[i] = (ISurvivor) factory.make("military");
 			}
 		}
 		return survivors;
