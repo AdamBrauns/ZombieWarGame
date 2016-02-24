@@ -24,8 +24,11 @@ public class Main {
 		IZombie[] zombies = randomZombies();
 		ISurvivor[] survivors = randomSurvivors();
 
-		System.out.println("We have " + survivors.length + " survivors trying to make it to safety." + countCharacters(survivors));
-		System.out.println("But there are " + zombies.length + " zombies waiting for them." + countCharacters(zombies));
+		System.out.println("We have " + survivors.length + " survivors trying to make it to safety.");
+		System.out.println(countCharacters(survivors));
+		System.out.println("But there are " + zombies.length + " zombies waiting for them.");
+		System.out.println(countCharacters(zombies));
+		System.out.println("- - - - - - - - - - - - - - - - - - - -");
 
 		//      When all the survivors have done attacking, it's the zombies'
 		//      turn to attack.  For each zombie that is still alive, attack
@@ -38,6 +41,8 @@ public class Main {
 
 			if (allDead(zombies) || allDead(survivors)) { break; }
 		}
+
+		System.out.println("- - - - - - - - - - - - - - - - - - - -");
 
 		if (allDead(survivors)) {
 			System.out.println("None of the survivors made it.");
@@ -152,7 +157,7 @@ public class Main {
 					survivor.attack(zomby);
 					//if survivor kills a zombie, print out their accomplishment
 					if (!zomby.isAlive()) {
-						System.out.println(survivor + " " + survivor.getIndex() + " killed " + zomby + " " + zomby.getIndex());
+						System.out.println("    " + survivor + " " + survivor.getIndex() + " killed " + zomby + " " + zomby.getIndex());
 					}
 				}
 			}
@@ -168,7 +173,7 @@ public class Main {
 				}
 				//if zombie kills a survivor, print out their accomplishment
 				if (!survivor.isAlive()) {
-					System.out.println(zomby + " " + zomby.getIndex() + " killed " + survivor + " " + survivor.getIndex());
+					System.out.println("    " + zomby + " " + zomby.getIndex() + " killed " + survivor + " " + survivor.getIndex());
 				}
 			}
 		}
