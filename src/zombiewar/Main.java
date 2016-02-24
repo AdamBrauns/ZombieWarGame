@@ -73,10 +73,10 @@ public class Main {
 					zombies[i] = (IZombie) factory.make("spitter");
 					break;
 				case 5:
-					survivors[i] = (IZombie) factory.make("undeaddog");
+					zombies[i] = (IZombie) factory.make("undeaddog");
 					break;
 				case 6:
-					survivors[i] = (IZombie) factory.make("undeadbear");
+					zombies[i] = (IZombie) factory.make("undeadbear");
 					break;
 			}
 		}
