@@ -1,5 +1,8 @@
 package zombiewar;
 
+import java.util.HashMap;
+import java.util.Iterator;
+
 import zombiewar.impl.CharacterFactory;
 import zombiewar.intf.ICharacter;
 import zombiewar.intf.ICharacterFactory;
@@ -21,6 +24,7 @@ public class Main {
 		IZombie[] zombies = randomZombies();
 		ISurvivor[] survivors = randomSurvivors();
 
+<<<<<<< HEAD
 	  System.out.print("We have " + survivors.length + " survivors trying to make it to safety. (");
 	  int numCommon = 0, numTank = 0, numPredator = 0; 
 	  
@@ -45,6 +49,11 @@ public class Main {
 	  
 	  
 	  System.out.println(")\nBut there are " + zombies.length + " zombies waiting for them.\n");
+=======
+		System.out.println("We have " + survivors.length + " survivors trying to make it to safety." + countCharacters(survivors));
+		System.out.println("But there are " + zombies.length + " zombies waiting for them." + countCharacters(zombies));
+
+>>>>>>> d0c5db70203d8852ef703f07c8ea0c5e7fd76ab0
 		//      When all the survivors have done attacking, it's the zombies'
 		//      turn to attack.  For each zombie that is still alive, attack
 		//      each suvivor that is still alive.  Repeat this cycle until
@@ -123,6 +132,38 @@ public class Main {
 		return survivors;
 	}
 
+	private static String countCharacters(final ICharacter[] characters) {
+
+		// save in a hash map the quantity of each character
+		HashMap<String, Integer> counter = new HashMap<>();
+
+		for (ICharacter character : characters) {
+			Integer count = counter.get(character.toString());
+			if (count == null) {
+				counter.put(character.toString(), 1);
+			} else {
+				counter.put(character.toString(), ++count);
+			}
+		}
+
+		StringBuilder text = new StringBuilder("There are ");
+
+		for (Iterator<String> it = counter.keySet().iterator(); it.hasNext(); ) {
+			String key = it.next();
+			Integer quantity = counter.get(key);
+			text.append(quantity).append(" ").append(key);
+			if (it.hasNext()) {
+				text.append(", ");
+			} else {
+				text.append(".");
+			}
+
+		}
+
+
+		return text.toString();
+	}
+
 	public static void survivorsAttack(ISurvivor[] survivors, IZombie[] zombies) {
 		for (ISurvivor survivor : survivors) {
 			for (IZombie zomby : zombies) {
@@ -147,7 +188,7 @@ public class Main {
 				}
 				//if zombie kills a survivor, print out their accomplishment
 				if (!survivor.isAlive()) {
-					System.out.println(zomby + " " + zomby + " killed " + survivor + " " + survivor);
+					System.out.println(zomby + " " + zomby.getIndex() + " killed " + survivor + " " + survivor.getIndex());
 				}
 			}
 		}
