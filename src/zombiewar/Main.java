@@ -170,10 +170,10 @@ public class Main {
 				// each zombie attacks each survivor if they're both alive
 				if (survivor.isAlive() && zomby.isAlive()) {
 					zomby.attack(survivor);
-				}
-				//if zombie kills a survivor, print out their accomplishment
-				if (!survivor.isAlive()) {
-					System.out.println("    " + zomby + " " + zomby.getIndex() + " killed " + survivor + " " + survivor.getIndex());
+					//if zombie kills a survivor, print out their accomplishment
+					if (!survivor.isAlive()) {
+						System.out.println("    " + zomby + " " + zomby.getIndex() + " killed " + survivor + " " + survivor.getIndex());
+					}
 				}
 			}
 		}
