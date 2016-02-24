@@ -9,12 +9,12 @@ import zombiewar.intf.IZombie;
  * @author Reinaldo
  */
 public class RadioactiveZombie extends Character implements IZombie {
-
+	public static int COUNT = 0;
 	private int index;
 
 	RadioactiveZombie() {
 		super(75);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override
