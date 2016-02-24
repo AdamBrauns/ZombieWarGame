@@ -11,11 +11,12 @@ import zombiewar.intf.IZombie;
 
 public class Military extends Character implements ISurvivor {
 
+	public static int COUNT = 0;
 	private int index;
 
-	public Military(int index) {
+	public Military() {
 		super(70);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override

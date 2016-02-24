@@ -9,12 +9,12 @@ import zombiewar.intf.IZombie;
  * @author Reinaldo
  */
 public class Dog extends Character implements ISurvivor {
-
+	public static int COUNT = 0;
 	private int index;
 
-	Dog(int index) {
+	Dog() {
 		super(50);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override

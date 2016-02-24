@@ -9,15 +9,15 @@ import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
 public class Student extends Character implements ISurvivor {
-
+	public static int COUNT = 0;
 	private int index;
 
 	/**
 	 * A student starts with 50 points of health
 	 */
-	public Student(int index) {
+	public Student() {
 		super(50);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override

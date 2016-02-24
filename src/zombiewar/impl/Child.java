@@ -11,14 +11,15 @@ import zombiewar.intf.IZombie;
 
 public class Child extends Character implements ISurvivor {
 
+	public static int COUNT = 0;
 	private int index;
 
 	/**
 	 * A Child starts with 20 points of health
 	 */
-	public Child(int index) {
+	public Child() {
 		super(20);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override

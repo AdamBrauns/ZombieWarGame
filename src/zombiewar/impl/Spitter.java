@@ -9,12 +9,12 @@ import zombiewar.intf.IZombie;
  * @author Reinaldo
  */
 public class Spitter extends Character implements IZombie {
-
+	public static int COUNT = 0;
 	private int index;
 
-	public Spitter(int index) {
+	public Spitter() {
 		super(45);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override

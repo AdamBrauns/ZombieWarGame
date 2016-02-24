@@ -103,14 +103,14 @@ public class Main {
 	}
 
 	public static void survivorsAttack(ISurvivor[] survivors, IZombie[] zombies) {
-		for (int i = 0; i < survivors.length; i++) {
-			for (int j = 0; j < zombies.length; j++) {
+		for (ISurvivor survivor : survivors) {
+			for (IZombie zomby : zombies) {
 				// each survivor attacks each zombie if they're both alive
-				if (survivors[i].isAlive() && zombies[j].isAlive()) {
-					survivors[i].attack(zombies[j]);
+				if (survivor.isAlive() && zomby.isAlive()) {
+					survivor.attack(zomby);
 					//if survivor kills a zombie, print out their accomplishment
-					if (!zombies[j].isAlive()) {
-						System.out.println(survivors[i] + " " + i + " killed " + zombies[j] + " " + j);
+					if (!zomby.isAlive()) {
+						System.out.println(survivor + " " + survivor.getIndex() + " killed " + zomby + " " + zomby.getIndex());
 					}
 				}
 			}
@@ -118,15 +118,15 @@ public class Main {
 	}
 
 	public static void zombiesAttack(ISurvivor[] survivors, IZombie[] zombies) {
-		for (int i = 0; i < zombies.length; i++) {
-			for (int j = 0; j < survivors.length; j++) {
+		for (IZombie zomby : zombies) {
+			for (ISurvivor survivor : survivors) {
 				// each zombie attacks each survivor if they're both alive
-				if (survivors[j].isAlive() && zombies[i].isAlive()) {
-					zombies[i].attack(survivors[j]);
+				if (survivor.isAlive() && zomby.isAlive()) {
+					zomby.attack(survivor);
 				}
 				//if zombie kills a survivor, print out their accomplishment
-				if (!survivors[j].isAlive()) {
-					System.out.println(zombies[i] + " " + i + " killed " + survivors[j] + " " + j);
+				if (!survivor.isAlive()) {
+					System.out.println(zomby + " " + zomby + " killed " + survivor + " " + survivor);
 				}
 			}
 		}

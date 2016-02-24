@@ -9,14 +9,14 @@ import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
 public class Predator extends Character implements IZombie{
-
+	public static int COUNT = 0;
 	private int index;
 	/**
 	 * A Predator starts with 80 points of health
 	 */
-	public Predator(int index) {
+	public Predator() {
 		super(80);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override

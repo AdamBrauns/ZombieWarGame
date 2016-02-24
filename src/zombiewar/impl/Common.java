@@ -9,15 +9,16 @@ import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
 public class Common extends Character implements IZombie {
-
+	public static int COUNT = 0;
 	private int index;
+
 	/**
 	 * A Common starts with 30 points of health
 	 */
-	public Common(int index) {
+	public Common() {
 
 		super(30);
-		this.index = index;
+		index = COUNT++;
 	}
 
 	@Override
