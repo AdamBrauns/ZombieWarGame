@@ -21,7 +21,7 @@ public class UndeadDog extends Character implements IZombie{
 
 	@Override
 	public void attack(ISurvivor survivor) {
-		survivor.decreaseHealth(25);
+		survivor.decreaseHealth(15);
 	}
 
 	@Override
