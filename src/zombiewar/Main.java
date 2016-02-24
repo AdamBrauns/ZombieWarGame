@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import zombiewar.impl.CharacterFactory;
+import zombiewar.impl.Common;
+import zombiewar.impl.Predator;
+import zombiewar.impl.Tank;
 import zombiewar.intf.ICharacter;
 import zombiewar.intf.ICharacterFactory;
 import zombiewar.intf.ISurvivor;
@@ -24,36 +27,33 @@ public class Main {
 		IZombie[] zombies = randomZombies();
 		ISurvivor[] survivors = randomSurvivors();
 
-<<<<<<< HEAD
-	  System.out.print("We have " + survivors.length + " survivors trying to make it to safety. (");
-	  int numCommon = 0, numTank = 0, numPredator = 0; 
-	  
-	  for(IZombie element: zombies){
-		  if(element instanceof Common){
-			  numCommon++;
-		  }else if(element instanceof Tank){
-			  numTank++;
-		  }else if(element instanceof Predator){
-			  numPredator++;
-		  }
-	  }
-	  if(numCommon>0){
-		  System.out.print(numCommon+" Common ");
-	  }
-	  if(numTank>0){
-		  System.out.print(numTank+" Tank ");
-	  }
-	  if(numPredator>0){
-		  System.out.print(numPredator+" Predator ");
-	  }
-	  
-	  
-	  System.out.println(")\nBut there are " + zombies.length + " zombies waiting for them.\n");
-=======
+		System.out.print("We have " + survivors.length + " survivors trying to make it to safety. (");
+		int numCommon = 0, numTank = 0, numPredator = 0;
+
+		for (IZombie element : zombies) {
+			if (element instanceof Common) {
+				numCommon++;
+			} else if (element instanceof Tank) {
+				numTank++;
+			} else if (element instanceof Predator) {
+				numPredator++;
+			}
+		}
+		if (numCommon > 0) {
+			System.out.print(numCommon + " Common ");
+		}
+		if (numTank > 0) {
+			System.out.print(numTank + " Tank ");
+		}
+		if (numPredator > 0) {
+			System.out.print(numPredator + " Predator ");
+		}
+
+
+		System.out.println(")\nBut there are " + zombies.length + " zombies waiting for them.\n");
 		System.out.println("We have " + survivors.length + " survivors trying to make it to safety." + countCharacters(survivors));
 		System.out.println("But there are " + zombies.length + " zombies waiting for them." + countCharacters(zombies));
 
->>>>>>> d0c5db70203d8852ef703f07c8ea0c5e7fd76ab0
 		//      When all the survivors have done attacking, it's the zombies'
 		//      turn to attack.  For each zombie that is still alive, attack
 		//      each suvivor that is still alive.  Repeat this cycle until
