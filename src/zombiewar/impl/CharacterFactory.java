@@ -50,6 +50,10 @@ public class CharacterFactory implements ICharacterFactory {
 				return new Spitter();
 			case "military":
 				return new Military();
+			case "undeaddog":
+				return new UndeadDog();
+			case "undeadbear"":
+				return new UndeadBear();
 		}
 		return null;
 	}
