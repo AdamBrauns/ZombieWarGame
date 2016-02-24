@@ -14,7 +14,7 @@ public class UndeadDog extends Character implements IZombie{
 	/**
 	 * A UndeadDog starts with 60 points of health
 	 */
-	public Predator() {
+	public UndeadDog() {
 		super(60);
 		index = COUNT++;
 	}
