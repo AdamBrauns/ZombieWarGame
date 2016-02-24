@@ -52,7 +52,7 @@ public class CharacterFactory implements ICharacterFactory {
 				return new Military();
 			case "undeaddog":
 				return new UndeadDog();
-			case "undeadbear"":
+			case "undeadbear":
 				return new UndeadBear();
 		}
 		return null;
