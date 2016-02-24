@@ -12,7 +12,7 @@ public class RadioactiveZombie extends Character implements IZombie {
 
 	private int index;
 
-	RadioactiveZombie(int index) {
+	RadioactiveZombie() {
 		super(75);
 		this.index = index;
 	}

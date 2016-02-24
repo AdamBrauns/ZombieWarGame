@@ -24,7 +24,7 @@ public class Spitter extends Character implements IZombie {
 
 	@Override
 	public String toString() {
-		return "Radioactive Zombie";
+		return "Spitter";
 	}
 
 	@Override

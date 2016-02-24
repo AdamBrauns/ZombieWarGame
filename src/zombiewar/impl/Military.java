@@ -26,7 +26,7 @@ public class Military extends Character implements ISurvivor {
 
 	@Override
 	public String toString() {
-		return "military";
+		return "Military";
 	}
 
 	@Override
